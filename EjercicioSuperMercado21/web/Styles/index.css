@@ -1,0 +1,155 @@
+/* Estilos generales con imagen de fondo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/FondoSuperMercado.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+/* Navbar */
+nav {
+    background-color: #2f4f4f;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 2px solid #3cb371;
+}
+
+nav a {
+    color: #f0f6f2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: black;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: #f0f6f2;
+    background-color: #3b5d3b;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #3cb371;
+    transform: translateY(-2px);
+}
+
+/* Panel de bienvenida */
+.panel {
+    background: linear-gradient(135deg, #3cb371, #2e8b57);
+    color: white;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    text-align: center;
+    width: 95%;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Carrusel */
+.carousel-container {
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.carousel-img {
+    height: 125px;
+    object-fit: cover;
+}
+
+/* Overlay de texto en carrusel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+}
+
+.carousel-caption h5 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+/* Contenido dinámico */
+.contenido {
+    width: 95%;
+    margin: 1.5rem auto 2rem;
+    border: 1px solid #dee2e6;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.contenido iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .carousel-img {
+        height: 250px;
+    }
+
+    .panel {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .contenido iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido iframe {
+        height: 500px;
+    }
+}

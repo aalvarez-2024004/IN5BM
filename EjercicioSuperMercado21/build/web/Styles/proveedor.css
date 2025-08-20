@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f6f2;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 95%;
+    margin: 2rem auto;
+}
+
+/* Formulario de proveedores */
+.form-container {
+    flex: 1 1 350px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+    color: #2e8b57;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.formulario input:focus {
+    border-color: #3cb371;
+    outline: none;
+    box-shadow: 0 0 5px rgba(60,179,113,0.5);
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.botones button {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+.botones button[value="Agregar"] {
+    background-color: #3cb371;
+}
+
+.botones button[value="Agregar"]:hover {
+    background-color: #2e8b57;
+}
+
+.botones button[value="Actualizar"] {
+    background-color: #20b2aa;
+}
+
+.botones button[value="Actualizar"]:hover {
+    background-color: #16887c;
+}
+
+/* Marca interna */
+.marca-interna {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Tabla de proveedores */
+.table-container {
+    flex: 2 1 600px;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #3cb371;
+    color: white;
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+tbody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+tbody tr:hover {
+    background-color: #f0f9f5;
+}
+
+.btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-editar {
+    background-color: #20b2aa;
+}
+
+.btn-editar:hover {
+    background-color: #16887c;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+}
+
+.btn-eliminar:hover {
+    background-color: #a71d2a;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contenedor-principal {
+        flex-direction: column;
+    }
+
+    .table-container {
+        overflow-x: scroll;
+    }
+}
